@@ -60,7 +60,6 @@
 
   button {
     @include mixin.flex-center;
-
     color:  #111;
     margin: 0.5em 0 0.1em;
 

@@ -36,7 +36,6 @@ picture {
 
 button {
   @include mixin.clear;
-
   margin:    5px;
   padding:   0.5em;
   font-size: 1rem;
@@ -47,6 +46,5 @@ button:not(:disabled) {
 
 #app {
   @include mixin.flex-center;
-
   min-height: inherit;
 }
