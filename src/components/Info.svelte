@@ -97,7 +97,7 @@
     @include mixin.clear;
 
     width:        11px;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
 
     transition:       transform 200ms;
     box-shadow:       0 0 5px rgba(0, 0, 0, 0.2);
@@ -108,25 +108,16 @@
       transform: scale(1.5);
     }
   }
-  @mixin track {
-    height:           3px;
-    background-color: #666;
-  }
   input[type=range] {
     @include mixin.clear;
 
     width:  55%;
-    height: 100%;
+    height: 3px;
     margin: 0 0.75em;
+    background-color: #666;
 
     &::-moz-range-thumb     { @include thumb; }
-    &::-webkit-slider-thumb {
-      @include thumb;
-      margin-top: -3.32px;
-    }
-
-    &::-moz-range-track              { @include track; }
-    &::-webkit-slider-runnable-track { @include track; }
+    &::-webkit-slider-thumb { @include thumb; }
 
     &:disabled {
       &::-moz-range-thumb:hover     { transform: none; }
