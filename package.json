@@ -1,6 +1,7 @@
 {
     "name": "music-player",
     "type": "module",
+    "private": true,
     "version": "0.1.0",
     "description": "Simple music player",
     "scripts": {
@@ -12,7 +13,7 @@
         "music-player"
     ],
     "author": "Piagrammist",
-    "license": "MIT",
+    "license": "AGPL-3.0-only",
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^1.0.4",
         "autoprefixer": "^10.4.8",
