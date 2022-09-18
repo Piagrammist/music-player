@@ -6,11 +6,10 @@
   music.volume = 0.2
 
   let playIcon
-  const togglePlayIcon = () => {
+  function togglePlayIcon() {
     playIcon.classList.toggle('fa-play')
     playIcon.classList.toggle('fa-pause')
   }
-
   function onPlayClick() {
     music.paused ? music.play() : music.pause()
     togglePlayIcon()
@@ -80,6 +79,7 @@
       transform: scale(1.2);
     }
   }
+
   :global(.fa-pause) {
     font-size: $ico-size * 1.1;
   }

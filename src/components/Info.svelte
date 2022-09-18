@@ -13,7 +13,6 @@
       seconds < 10 ? '0' + seconds.toString() : seconds.toString()
     return `${minutesString}:${secondsString}`
   }
-
   function setRangeProgressWidth(e, width=-1) {
     const padding = 0.8
     if (width === -1) {
@@ -67,7 +66,6 @@
     <div id=name>Safe</div>
     <div id=author>Dallic</div>
   </div>
-
   <div id=time>
     <span id=now bind:this={now}>00:00</span>
     <input type=range min=0 value=0 disabled
@@ -92,7 +90,6 @@
   #author {
     font-size: 0.8rem;
   }
-
   #time {
     @include mixin.flex-center;
     width:  inherit;
@@ -124,16 +121,14 @@
     &::-moz-range-thumb     { @include thumb; }
     &::-webkit-slider-thumb { @include thumb; }
   }
-
   input[type=range]:not(:disabled) {
     &::-webkit-slider-thumb       { cursor: pointer; }
     &:hover::-webkit-slider-thumb { width:  14px;    }
   }
-
   input[type=range] {
     &::before, &::after {
-      left:       var(--padding);
-      width:      var(--width);
+      left:       var(--padding, 0);
+      width:      var(--width  , 0);
       height:     1px;
       content:    '';
       opacity:    0.5;
