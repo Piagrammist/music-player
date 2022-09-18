@@ -1,0 +1,4 @@
+*       eol=lf
+*.jpg   -text
+*.png   -text
+*.mp3   -text

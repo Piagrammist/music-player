@@ -1,0 +1,19 @@
+@mixin grid-center {
+  display:         grid;
+  align-items:     center;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+}
+
+@mixin clear {
+  border:        none;
+  outline:       none;
+  appearance:    none;
+  background:    none;
+  border-radius: 0;
+}

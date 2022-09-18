@@ -1,0 +1,52 @@
+@use './mixin';
+
+:root {
+  font-size:   16px;
+  font-family: Recursive, Arial, sans-serif;
+  font-weight: 500;
+}
+
+::selection {
+  color:            #f0f0f0;
+  background-color: #444;
+}
+
+*,
+*::after,
+*::before {
+  margin:     0;
+  padding:    0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height:       100vh;
+  background-color: #111;
+}
+
+img,
+picture {
+  display:   block;
+  max-width: 100%;
+}
+
+button {
+  @include mixin.clear;
+
+  margin:    5px;
+  padding:   0.5em;
+  font-size: 1rem;
+}
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+#app {
+  @include mixin.flex-center;
+
+  min-height: inherit;
+}
